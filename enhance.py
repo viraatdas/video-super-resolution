@@ -1,23 +1,5 @@
-#####
-# import numpy as np
-# from PIL import Image
-# from ISR.models import RDN
-
-# img = Image.open('data/input/test_images/section8-image.png')
-# lr_img = np.array(img)
-
-# rdn = RDN(weights='psnr-small')
-
-# sr_img = rdn.predict(lr_img)
-# im = Image.fromarray(sr_img)
-# im.show()
-
-
-####
-
-
 """
-Module docstirng
+Module docstring
 """
 
 __author__ = "Viraat Das"
@@ -25,29 +7,28 @@ __version__ = "0.1.0"
 __license__ = "MIT"
 
 import argparse
-
+from generate_upscale import upscale_video
 
 def main(args):
+    filename = args.filename
+    remove_noise = args.remove_noise
+    scale_factor = int(args.zoom)
+    
+    up_video = upscale_video(filename, remove_noise, scale_factor)
+    up_video.upscale_images_from_video()
 
     print(args)
 
 
 if __name__ == "__main__":
-    """ This is executed when run from the command line """
     parser = argparse.ArgumentParser()
 
-    # Required positional argument
-    parser.add_argument("arg", help="Required positional argument")
+    parser.add_argument("filename", help="Required positional argument")
 
-    # ISR parameters
-    # scaling factor --zoom
-    # remove noise 
+    parser.add_argument("--zoom", default="2", help="Specifies scaling factor of video")
 
-    parser.add_argument("--zoom", default="2")
+    parser.add_argument("--remove_noise", action="store_true", help="If specified, then will denoise the video")
 
-    parser.add_argument("--remove_noise", action="store_true")
-
-    # Specify output of "--version"
     parser.add_argument(
         "--version",
         action="version",
