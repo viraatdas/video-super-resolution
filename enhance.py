@@ -1,3 +1,6 @@
+# multithreaded support 
+# https://github.com/opencv/opencv/blob/master/samples/python/video_threaded.py
+
 """
 Module docstring
 """
@@ -7,15 +10,20 @@ __version__ = "0.1.0"
 __license__ = "MIT"
 
 import argparse
-from generate_upscale import upscale_video
+from src.generate_upscale import upscale_video
 
 def main(args):
+    # parameters from arg
     filename = args.filename
     remove_noise = args.remove_noise
     scale_factor = int(args.zoom)
     
+    # create new frames apply Super Resolution
     up_video = upscale_video(filename, remove_noise, scale_factor)
     up_video.upscale_images_from_video()
+
+    # extract audio from original video 
+
 
     print(args)
 
