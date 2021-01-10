@@ -184,16 +184,16 @@ Project Link: [https://github.com/viraatdas/video-super-resolution](https://gith
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/viraatdas/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/viraatdas/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/viraatdas/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/viraatdas/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/viraatdas/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/viraatdas/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/viraatdas/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/viraatdas/repo/issues
-[license-shield]: https://img.shields.io/github/license/viraatdas/repo.svg?style=for-the-badge
-[license-url]: https://github.com/viraatdas/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/viraatdas/video-super-resolution.svg?style=for-the-badge
+[contributors-url]: https://github.com/viraatdas/video-super-resolution/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/viraatdas/video-super-resolution.svg?style=for-the-badge
+[forks-url]: https://github.com/viraatdas/video-super-resolution/network/members
+[stars-shield]: https://img.shields.io/github/stars/viraatdas/video-super-resolution.svg?style=for-the-badge
+[stars-url]: https://github.com/viraatdas/video-super-resolution/stargazers
+[issues-shield]: https://img.shields.io/github/issues/viraatdas/video-super-resolution.svg?style=for-the-badge
+[issues-url]: https://github.com/viraatdas/video-super-resolution/issues
+[license-shield]: https://img.shields.io/github/license/viraatdas/video-super-resolution.svg?style=for-the-badge
+[license-url]: https://github.com/viraatdas/video-super-resolution/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/viraatdas
 
