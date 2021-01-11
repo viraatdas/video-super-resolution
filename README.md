@@ -38,12 +38,12 @@
   <h3 align="center">Video Super Resolution</h3>
 
   <p align="center">
-    project_description
+    Image Super Resolution (ISR) is a way to improve quality of low resolution images and upscale it. This project utilizes that and enables it to be used for videos. 
     <br />
     <a href="https://github.com/viraatdas/video-super-resolution"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/viraatdas/video-super-resolution">View Demo</a>
+    <a href="https://github.com/viraatdas/video-super-resolution#demo">View Demo</a>
     ·
     <a href="https://github.com/viraatdas/video-super-resolution/issues">Report Bug</a>
     ·
@@ -84,33 +84,41 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The project was developed using Python 3.6
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`viraatdas`, `video-super-resolution`, `therealviraat`, `viraat.laldas@gmail.com`, `project_title`, `project_description`
 
+## Demo
+Original                   |  Video Super Resolution
+:-------------------------:|:-------------------------:
+![](assets/scaled_down.gif)  |  ![](assets/scaled_up.gif)
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [ISR](https://github.com/idealo/image-super-resolution)
+* [OpenCV](https://github.com/opencv/opencv)
+* [ffmpeg](https://ffmpeg.org/ffmpeg.html)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+Follow the steps to get started 
+
+TODO: Add docker support
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* ffmpeg 
+  - Mac: 
+    - ```sh
+      brew install ffmpeg
+      ```
+  - Linux: 
+    - ```sh
+        sudo apt install ffmpeg
+        ```
 
 ### Installation
 
@@ -118,9 +126,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/viraatdas/video-super-resolution.git
    ```
-2. Install NPM packages
+2. Install modules
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
 
 
@@ -128,16 +136,26 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Example: `python enhance.py example/video_short.mp4`
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```
+positional arguments:
+  filename              Required positional argument
 
+optional arguments:
+  -h, --help            show this help message and exit
+  --zoom ZOOM           Specifies scaling factor of video
+  --remove_noise        If specified, then will denoise the video
+  --output_filename     OUTPUT_FILENAME
+                        Specify output filename
+  --version             show program's version number and exit
+```
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/viraatdas/video-super-resolution/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/viraatdas/video-super-resolution/issues) for a list of proposed features (and known issues). Feel free to add to it. 
 
 
 
@@ -165,18 +183,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Your Name - [@therealviraat](https://twitter.com/therealviraat) - viraat.laldas@gmail.com
-
-Project Link: [https://github.com/viraatdas/video-super-resolution](https://github.com/viraatdas/video-super-resolution)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
 
 README template based on [othneildrew](https://github.com/othneildrew/Best-README-Template)
 

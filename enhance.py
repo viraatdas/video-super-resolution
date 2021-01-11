@@ -22,6 +22,7 @@ def main(args):
     # create new frames apply Super Resolution
     up_video = upscale_video(filename, remove_noise, scale_factor, output_filename)
     up_video.upscale_images_from_video()
+    up_video.combine_video_with_audio()
     up_video.extract_and_apply_audio()
 
 
@@ -34,7 +35,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--remove_noise", action="store_true", help="If specified, then will denoise the video")
 
-    parser.add_argument("--output_filename", default="ouput_video.mp4", help="Specify output filename")
+    parser.add_argument("--output_filename", default="output_video.mp4", help="Specify output filename")
 
     parser.add_argument(
         "--version",
