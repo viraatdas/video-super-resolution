@@ -17,13 +17,12 @@ def main(args):
     filename = args.filename
     remove_noise = args.remove_noise
     scale_factor = int(args.zoom)
+    output_filename = args.output_filename
     
     # create new frames apply Super Resolution
-    up_video = upscale_video(filename, remove_noise, scale_factor)
+    up_video = upscale_video(filename, remove_noise, scale_factor, output_filename)
     up_video.upscale_images_from_video()
-
-    # extract audio from original video 
-
+    up_video.extract_audio_and_apply()
 
     print(args)
 
@@ -36,6 +35,8 @@ if __name__ == "__main__":
     parser.add_argument("--zoom", default="2", help="Specifies scaling factor of video")
 
     parser.add_argument("--remove_noise", action="store_true", help="If specified, then will denoise the video")
+
+    parser.add_argument("--output_filename", default="ouput_video.mp4", help="Specify output filename")
 
     parser.add_argument(
         "--version",
