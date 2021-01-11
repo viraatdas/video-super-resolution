@@ -32,7 +32,6 @@
 <br />
 <p align="center">
   <a href="https://github.com/viraatdas/video-super-resolution">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Video Super Resolution</h3>
@@ -75,7 +74,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  
   </ol>
 </details>
 
@@ -84,8 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The project was developed using Python 3.6
-
+The project was developed using Python 3.6. The aim of this is to scale up a video and increase the quality of it. Using Image Super Resolution, each frame is scaled up. The various deep learning methods allow for quality to improve even though the video is scaled up. You can learn more about ISR [here](https://github.com/idealo/image-super-resolution).
 
 ## Demo
 Original                   |  Video Super Resolution
@@ -136,7 +134,8 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Example: `python enhance.py example/video_short.mp4`
+Example: `python enhance.py example/video_short.mp4` 
+You can remove the noise from each frame as well!
 
 ```
 positional arguments:
@@ -182,7 +181,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@therealviraat](https://twitter.com/therealviraat) - viraat.laldas@gmail.com
+Viraat Das - [@therealviraat](https://twitter.com/therealviraat) - viraat.laldas@gmail.com
 
 README template based on [othneildrew](https://github.com/othneildrew/Best-README-Template)
 
