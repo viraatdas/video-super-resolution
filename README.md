@@ -134,7 +134,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Example: `python enhance.py example/video_short.mp4` 
+Example: `python enhance.py example/video_short.mp4 --zoom 3 --remove_noise` 
 You can remove the noise from each frame as well!
 
 ```
@@ -143,7 +143,7 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --zoom ZOOM           Specifies scaling factor of video
+  --zoom ZOOM           Specifies scaling factor of video (default is 2x)
   --remove_noise        If specified, then will denoise the video
   --output_filename     OUTPUT_FILENAME
                         Specify output filename
