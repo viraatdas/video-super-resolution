@@ -4,9 +4,6 @@ import numpy as np
 from PIL import Image
 from ISR.models import RDN
 import os
-import time
-from moviepy.editor import ImageClip
-from moviepy.editor import concatenate
 from src.extract_audio import audio_extract
 
 class upscale_video:
@@ -18,25 +15,26 @@ class upscale_video:
         else:
             self.rdn = RDN(weights='psnr-large')
         
+        self.output_filename = output_filename
+    
         self.vidcap = cv2.VideoCapture(self.input_filename)
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
-    
-        self.output_filename = output_filename
-        self.output_video = None
+        self.fourcc = self.vidcap.get(cv2.CAP_PROP_FOURCC)
+        width = int(self.vidcap.get(3))
+        height = int(self.vidcap.get(4))
+        self.frame_size = (width, height)
+        self.out = cv2.VideoWriter(self.output_filename, -1, int(self.fps), self.frame_size)
 
     def upscale_images_from_video(self):
-        video_clips = []
         ret, orig_img = self.vidcap.read()
-        curr_time = time.time()
+        count = 0
         while ret:
             sr_img = self.rdn.predict(orig_img)
-            video_clips.append(ImageClip(sr_img).set_duration(1/self.fps))
+            self.out.write(sr_img)
             ret, orig_img = self.vidcap.read()
-        print(f"Time it took to run ImageClip {time.time() - curr_time}")
-        curr_time = time.time()
-        self.output_video = concatenate(video_clips, method="chain")
-        print(f"Time it took to concatenate {time.time() - curr_time}")
+            count += 1
+        self.out.release()
 
-    def extract_audio_and_apply(self):
-        apply_audio = audio_extract(self.input_filename, self.output_video , self.fps, self.output_filename)
+    def extract_and_apply_audio(self):
+        apply_audio = audio_extract(self.input_filename, self.output_filename)
         apply_audio.extract_input_audio_and_apply()

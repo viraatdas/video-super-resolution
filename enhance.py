@@ -22,9 +22,7 @@ def main(args):
     # create new frames apply Super Resolution
     up_video = upscale_video(filename, remove_noise, scale_factor, output_filename)
     up_video.upscale_images_from_video()
-    up_video.extract_audio_and_apply()
-
-    print(args)
+    up_video.extract_and_apply_audio()
 
 
 if __name__ == "__main__":
