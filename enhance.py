@@ -2,7 +2,7 @@
 # https://github.com/opencv/opencv/blob/master/samples/python/video_threaded.py
 
 """
-Module docstring
+Scale up and improve quality of videos using Image Super Resolution
 """
 
 __author__ = "Viraat Das"
@@ -21,22 +21,25 @@ def main(args):
     
     # create new frames apply Super Resolution
     up_video = upscale_video(filename, remove_noise, scale_factor, output_filename)
+    
+    # creates directory with upscaled images from input file
     up_video.upscale_images_from_video()
-    up_video.combine_video_with_audio()
+
+    # combine images into video 
+    up_video.combine_img_dir_into_video()
+
+    # take outputted video and apply audio from input file to it
     up_video.extract_and_apply_audio()
 
 
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser()
 
     parser.add_argument("filename", help="Required positional argument")
-
     parser.add_argument("--zoom", default="2", help="Specifies scaling factor of video")
-
     parser.add_argument("--remove_noise", action="store_true", help="If specified, then will denoise the video")
-
     parser.add_argument("--output_filename", default="output_video.mp4", help="Specify output filename")
-
     parser.add_argument(
         "--version",
         action="version",
