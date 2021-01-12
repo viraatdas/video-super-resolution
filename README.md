@@ -81,7 +81,6 @@ Original                   |  Video Super Resolution
 
 Follow the steps to get started 
 
-TODO: Add docker support
 
 ### Prerequisites
 
