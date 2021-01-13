@@ -84,7 +84,6 @@ Follow the steps to get started
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * ffmpeg 
   - Mac: 
     - ```sh
@@ -94,6 +93,7 @@ This is an example of how to list things you need to use the software and how to
     - ```sh
         sudo apt install ffmpeg
         ```
+Python 3.6 might be required. Take a look at (pyenv)[https://github.com/pyenv/pyenv] for managing multiply Python versions. 
 
 ### Installation
 
