@@ -93,7 +93,7 @@ Follow the steps to get started
     - ```sh
         sudo apt install ffmpeg
         ```
-Python 3.6 might be required. Take a look at [pyenv](https://github.com/pyenv/pyenv) for managing multiply Python versions. 
+Python 3.6 might be required. Take a look at [pyenv](https://github.com/pyenv/pyenv) for managing multiple Python versions. 
 
 ### Installation
 
