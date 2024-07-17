@@ -1,6 +1,9 @@
 # multithreaded support 
 # https://github.com/opencv/opencv/blob/master/samples/python/video_threaded.py
 
+#Pyinstaller build command:
+#   pyinstaller.exe "enhance.py" -F --add-data "src;src" --add-data "tensorflow_core;tensorflow_core"
+
 """
 Scale up and improve quality of videos using Image Super Resolution
 """
