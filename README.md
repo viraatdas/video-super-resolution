@@ -94,9 +94,13 @@ Follow the steps to get started
         sudo apt install ffmpeg
         ```
 Python 3.6 might be required. Take a look at [pyenv](https://github.com/pyenv/pyenv) for managing multiple Python versions. 
+*Python 3.7.9-amd64 (32 bit python version will not work) was tested and found to work. Newer versions of python (>3.10) cannot install the required version of tensorflow.
 
 ### Installation
+Binary:
+Install the V0 release from the releases section on the github side panel.
 
+Source code:
 1. Clone the repo
    ```sh
    git clone https://github.com/viraatdas/video-super-resolution.git
@@ -113,6 +117,7 @@ Python 3.6 might be required. Take a look at [pyenv](https://github.com/pyenv/py
 Example: `python enhance.py example_videos/video_short.mp4`
 
 Example: `python enhance.py example_videos/video_short.mp4 --zoom 3 --remove_noise` 
+(Note: If you installed the binary, use the same commands, but instead of "python enhance.py" use "enhance.exe" then the other arguments.)
 
 ```
 positional arguments:
