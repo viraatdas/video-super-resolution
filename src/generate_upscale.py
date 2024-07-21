@@ -34,17 +34,21 @@ class upscale_video:
     
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
 
+        self.total_frames = self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT)
+
     """
     Go frame by frame and save the scaled up images into the self.dirname
     """
     def upscale_images_from_video(self):
         ret, orig_img = self.vidcap.read()
         count = 0
+        print(f"Starting upscale of frame {count}/{self.total_frames}.")
         while ret:
             sr_img = self.rdn.predict(orig_img)
             img_filename = f"{count}.jpg"
             cv2.imwrite(os.path.join(self.dirname, img_filename), sr_img) 
             ret, orig_img = self.vidcap.read()
+            print(f"Frame {count} upscale complete.")
             count += 1
 
     """
